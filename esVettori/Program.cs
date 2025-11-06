@@ -151,6 +151,16 @@ namespace eserciziArray
             Console.WriteLine("il numero piu grande e: " + mass + " e ha indice " + indicemax);
             Console.WriteLine("la media e: " + m);
             Console.WriteLine("la somma e: " + s);
+
+            Console.WriteLine("-----------------------------");
+
+            int[] vettore2 = { 12, -4, 5, 6, 10 };
+            int[] vettore3 = { 11, 3, -6, -8, 4 };
+            int[] vettore4 = [10];
+            for(int i = 0;i < vettore2.Length; i++)
+            {
+
+            }
         }
     }
 }
