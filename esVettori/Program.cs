@@ -128,6 +128,29 @@ namespace eserciziArray
                 Console.WriteLine($"[{vet2[i]}]");
             }
             Console.WriteLine("-----------------------------");
+
+            int[] vettore1 = { 6, 7, 8, 9, 10 };
+            int mass = vettore1[0], minimo = vettore1[0], s = 0, indicemax = 0, indicemin = 0;
+            float m = 0;
+            for (int i = 0; i < vettore1.Length; i++)
+            {
+                if (vettore1[i] > mass)
+                {
+                    mass = vettore1[i];
+                    indicemax = i;
+                }
+                if (vettore1[i] < minimo)
+                {
+                    minimo = vettore1[i];
+                    indicemin = i;
+                }
+                s = vettore1[i] + s;
+            }
+            m = s / vettore1.Length;
+            Console.WriteLine("il numero piu piccolo e: " + minimo + " e ha indice " + indicemin);
+            Console.WriteLine("il numero piu grande e: " + mass + " e ha indice " + indicemax);
+            Console.WriteLine("la media e: " + m);
+            Console.WriteLine("la somma e: " + s);
         }
     }
 }
