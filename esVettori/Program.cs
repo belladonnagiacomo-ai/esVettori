@@ -5,29 +5,18 @@ namespace eserciziArray
     {
         static void Main(string[] args)
         {
-            int N = 5;
-            int[] num;
-            num = new int[N];
-            for (int i = 0; i < num.Length; i++)
-            {
-                Console.WriteLine("dammi un numero");
-                num[i] = Convert.ToInt32(Console.ReadLine());
-            }
-
+            
+            int[] num = {1,2,3,4,5};
+         
             for (int z = num.Length - 1; z >= 0; z--)
             {
                 Console.WriteLine($"[{num[z]}]");
 
             }
             Console.WriteLine("-----------------------------");
-            int[] array = new int[N];
+            int[] array = {1,2,3,4,5};
 
-            for (int i = 0; i < array.Length; i++)
-            {
-                Console.WriteLine("dammi un numero");
-                int n = Convert.ToInt32(Console.ReadLine());
-                array[i] = n;
-            }
+       
             for (int i = 0; i < array.Length; i++)
             {
 
@@ -39,15 +28,9 @@ namespace eserciziArray
 
             Console.WriteLine("-----------------------------");
 
-            int[] array2 = new int[N];
+            int[] array2 = {1,2,3,4,5};
 
-            for (int i = 0; i < array2.Length; i++)
-            {
-                Console.WriteLine("Dammi un numero");
-                int num2 = Convert.ToInt32(Console.ReadLine());
-
-                array2[i] = num2;
-            }
+       
 
             for (int i = 0; i < array2.Length; i++)
             {
@@ -57,15 +40,9 @@ namespace eserciziArray
                 }
             }
             Console.WriteLine("-----------------------------");
-            int[] array3 = new int[N];
+            int[] array3 = {1,2,3,4,5};
 
-            for (int i = 0; i < array3.Length; i++)
-            {
-                Console.WriteLine("Dammi un numero");
-                int num3 = Convert.ToInt32(Console.ReadLine());
-
-                array3[i] = num3;
-            }
+           
             int a = 0, p = 0;
             for (int i = 0; i < array3.Length; i++)
             {
@@ -83,15 +60,9 @@ namespace eserciziArray
 
             Console.WriteLine("-----------------------------");
 
-            int[] array4 = new int[N];
+            int[] array4 = {1,2,3,4,5};
 
-            for (int i = 0; i < array4.Length; i++)
-            {
-                Console.WriteLine("Dammi un numero");
-                int num4 = Convert.ToInt32(Console.ReadLine());
-
-                array4[i] = num4;
-            }
+            
             int max = -10000, min = 10000, somma = 0;
             float media = 0;
             for (int i = 0; i < array4.Length; i++)
@@ -106,39 +77,57 @@ namespace eserciziArray
                 }
                 somma = array4[i] + somma;
             }
-            media = somma / N;
+            media = somma / array4.Length;
             Console.WriteLine("il numero piu piccolo e: " + min);
             Console.WriteLine("il numero piu grande e: " + max);
             Console.WriteLine("la media e: " + media);
 
             Console.WriteLine("-----------------------------");
 
-            int[] array5 = new int[N];
-            int x = 0, v1 = 0, v2 = 0;
-            for (int i = 0; i < array5.Length; i++)
-            {
-                Console.WriteLine("Dammi un numero");
-                int num5 = Convert.ToInt32(Console.ReadLine());
-             
-                array5[i] = num5;
-            }
+            int[] array5 = {1,2,3,4,5};
+            int x = 0, v1 = 0, v2 = 0, indexv1 = 0, indexv2 = 0;
             Console.WriteLine("Dammi un numero da analizzare");
             x = Convert.ToInt32(Console.ReadLine());
             for (int i = 0; i < array5.Length; i++)
             {
                     if (array5[i] < x)
                     {
-                        Console.WriteLine("il numero " + array5[i] + " e minore del numero " + x);
+                       
                         v1++;
                     }
-                    if (array5[i] > x)
+                    if (array5[i] >= x)
                     {
-                        Console.WriteLine("il numero " + array5[i] + " e maggiore del numero " + x);
+                       
                         v2++;
                     }
                
             }
+            int[] vet1 = new int[v1];
+            int[] vet2 = new int[v2];
+            for (int i = 0; i < array5.Length; i++) {
+                if (array5[i] < x)
+                {
+                    vet1[indexv1] = array5[i];
+                    indexv1++;
+                }
+                else
+                {
+                    vet2[indexv2] = array5[i];
+                    indexv2++;
+                }
             
+
+            }
+            for (int i = 0; i < vet1.Length; i++)
+            {
+                Console.WriteLine($"[{vet1[i]}]");
+            }
+            Console.WriteLine("-----------------------------");
+            for (int i = 0; i < vet2.Length; i++)
+            {
+                Console.WriteLine($"[{vet2[i]}]");
+            }
+            Console.WriteLine("-----------------------------");
         }
     }
 }
